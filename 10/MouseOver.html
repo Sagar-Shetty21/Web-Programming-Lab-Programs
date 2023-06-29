@@ -2,9 +2,27 @@
 <!DOCTYPE html PUBLIC * .//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title></title>
+        <title>Mouse Over and Mouse Out</title>
+        <style type="text/css">
+            #imagel {position: absolute; top: 50px; left: 50px; border: thin; visibility: visible}
+            #image2 {position: absolute; top: 50px; left: 50px; border: thin; visibility: hidden}
+        </style>
+        <script type="text/javascript">
+            function changeImage(){
+                var imageOne = document.getElementById("image1").style;
+                var imageTwo = document.getElementById("image2").style;
+                if(imageOne.visibility == "visible"){
+                    imageOne.visibility = "hidden", imageTwo.visibility = "visible";
+                }else{
+                    imageOne.visibility = "visible", imageTwo.visibility = "hidden";
+                }
+            }
+        </script>
     </head>
     <body>
-        
+        <form>
+            <img src="./zoozoo2.jpg" alt="ZooZoo Image" id="image1" onmouseover="changeImage()" onmouseout="changeImage()" width="800" height="500"></img>
+            <img src="./zoozoo1.jpg" alt="ZooZoo Image" id="image2" onmouseover="changeImage()" onmouseout="changeImage()" width="800" height="500"></img>
+        </form>
     </body>
 </html>

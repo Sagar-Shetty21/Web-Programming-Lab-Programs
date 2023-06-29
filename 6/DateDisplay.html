@@ -2,9 +2,22 @@
 <!DOCTYPE html PUBLIC * .//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title></title>
+        <title>Date Display</title>
+        <script type="text/javascript">
+            var days = ["First","Second","Third","Fourth","Fifth","Sixth","Seventh","Eighth","Ninth","Tenth","Eleventh","Twelth","Thirteenth",
+                        "Fourteenth","Fifteenth","Sisteenth","Seventeenth","Eighteenth","Nineteenth","Twentyeth","TwentyFirst","TwentySecond",
+                        "TwentyThird","TwentyFourth","TwentyFifth","TwentySixth","TwentySeventh","TwentyEighth","TwentyNinth","Thirtyeth","ThirtyFirst"];
+            var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+            var year = "Two Thousand Twenty Three";
+            var dateObj = new Date();
+            var currMonth = dateObj.getMonth();
+            var currDate = dateObj.getDate();
+            var currYear = dateObj.getFullYear();
+            if(currYear==2023){
+                alert("Today's Date is: " + days[currDate-1] + ", " + months[currMonth] + ", " + year);
+            }else{
+                alert("Today's Date is: " + days[currDate-1] + ", " + months[currMonth] + ", " + currYear);
+            }
+        </script>
     </head>
-    <body>
-        
-    </body>
 </html>

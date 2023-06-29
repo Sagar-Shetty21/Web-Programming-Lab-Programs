@@ -2,9 +2,19 @@
 <!DOCTYPE html PUBLIC * .//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title></title>
+        <title>Expression Evaluation</title>
+        <script type="text/javascript">
+            function evaluation(){
+                var enteredExpr = document.getElementById("expr").value;
+                document.getElementById("result").value = eval(enteredExpr);
+            }
+        </script>
     </head>
     <body>
-        
+        <form name="myForm">
+            Enter Any Valid Expression: <input type="text" id="expr"/><br/><br/>
+            <input type="button" value="Evaluate" onclick="evaluation()"/><br/><br/>
+            Result of the Expression: <input type="text" id="result"/><br/><br/>
+        </form>
     </body>
 </html>
