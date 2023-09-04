@@ -1,0 +1,54 @@
+<!-- Javascript program to demonstrate Conditional and Loop statements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional and Loop Statements</title>
+</head>
+<body>
+    <h1>Conditional and Loop Statements</h1>
+
+    <h2>Conditional Statements:</h2>
+    <p id="conditionalResult"></p>
+
+    <script>
+        // Conditional Statements
+        var age = 25;
+        var isStudent = true;
+
+        if (age < 18) {
+            document.getElementById("conditionalResult").textContent = "You are under 18 years old.";
+        } else if (age >= 18 && age <= 25 && isStudent) {
+            document.getElementById("conditionalResult").textContent = "You are between 18 and 25 years old and a student.";
+        } else {
+            document.getElementById("conditionalResult").textContent = "You are not under 18, not a student, or older than 25.";
+        }
+    </script>
+
+    <h2>Loop Statements:</h2>
+    <ul id="loopResult"></ul>
+
+    <script>
+        // Loop Statements
+        var fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+        // For Loop
+        for (var i = 0; i < fruits.length; i++) {
+            var listItem = document.createElement("li");
+            listItem.textContent = fruits[i];
+            document.getElementById("loopResult").appendChild(listItem);
+        }
+
+        // While Loop
+        var counter = 1;
+        while (counter <= 5) {
+            var listItem = document.createElement("li");
+            listItem.textContent = "Item " + counter;
+            document.getElementById("loopResult").appendChild(listItem);
+            counter++;
+        }
+    </script>
+</body>
+</html>

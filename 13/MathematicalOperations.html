@@ -1,0 +1,62 @@
+<!-- Javascript program to illustrate Mathematical Operations -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Operations with User Interaction</title>
+</head>
+<body>
+    <h1>Mathematical Operations with User Interaction</h1>
+
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1"><br>
+
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2"><br>
+
+    <button onclick="performMathOperations()">Calculate</button>
+
+    <h2>Results:</h2>
+    <p id="additionResult"></p>
+    <p id="subtractionResult"></p>
+    <p id="multiplicationResult"></p>
+    <p id="divisionResult"></p>
+    <p id="modulusResult"></p>
+
+    <script>
+        function performMathOperations() {
+            // Get user input
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            // Check if the input is valid
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            // Addition
+            var sum = num1 + num2;
+            document.getElementById("additionResult").textContent = "Addition: " + num1 + " + " + num2 + " = " + sum;
+
+            // Subtraction
+            var difference = num1 - num2;
+            document.getElementById("subtractionResult").textContent = "Subtraction: " + num1 + " - " + num2 + " = " + difference;
+
+            // Multiplication
+            var product = num1 * num2;
+            document.getElementById("multiplicationResult").textContent = "Multiplication: " + num1 + " * " + num2 + " = " + product;
+
+            // Division
+            var quotient = num1 / num2;
+            document.getElementById("divisionResult").textContent = "Division: " + num1 + " / " + num2 + " = " + quotient;
+
+            // Modulus (Remainder)
+            var remainder = num1 % num2;
+            document.getElementById("modulusResult").textContent = "Modulus (Remainder): " + num1 + " % " + num2 + " = " + remainder;
+        }
+    </script>
+</body>
+</html>
