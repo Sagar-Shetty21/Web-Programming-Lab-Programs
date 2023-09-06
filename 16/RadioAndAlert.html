@@ -1,2 +1,29 @@
 <!-- Create a webpage with three radio buttons, display the selected radio message to user using alert() method -->
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Radio Buttons Example</title>
+</head>
+<body>
+    <h1>Radio Buttons Example</h1>
+    
+    <label>
+        <input type="radio" name="message" value="Option 1" onclick="displayMessage('Option 1')"> Option 1
+    </label><br>
+    
+    <label>
+        <input type="radio" name="message" value="Option 2" onclick="displayMessage('Option 2')"> Option 2
+    </label><br>
+    
+    <label>
+        <input type="radio" name="message" value="Option 3" onclick="displayMessage('Option 3')"> Option 3
+    </label><br>
+
+    <script>
+        function displayMessage(message) {
+            alert("You selected: " + message);
+        }
+    </script>
+</body>
+</html>

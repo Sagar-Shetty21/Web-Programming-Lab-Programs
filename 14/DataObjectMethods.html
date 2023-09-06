@@ -1,2 +1,47 @@
-<!-- Javascript program to demonstrate Data.object methods -->
+<!-- Javascript program to demonstrate Date object methods -->
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Object Properties and Methods</title>
+</head>
+<body>
+    <h1>Date Object Properties and Methods</h1>
+    
+    <p id="currentDate"></p>
+    <p id="currentTime"></p>
+    <p id="timeZone"></p>
+    <p id="dayOfWeek"></p>
+    <p id="dayOfMonth"></p>
+    <p id="month"></p>
+    <p id="year"></p>
+    <p id="fullYear"></p>
+    <p id="hours"></p>
+    <p id="minutes"></p>
+    <p id="seconds"></p>
+    <p id="milliseconds"></p>
+    
+    <button onclick="displayDateDetails()">Display Date Details</button>
+
+    <script>
+        function displayDateDetails() {
+            // Create a new Date object for the current date and time
+            var currentDate = new Date();
+
+            // Display various properties and methods of the Date object
+            document.getElementById("currentDate").textContent = "Current Date: " + currentDate.toDateString();
+            document.getElementById("currentTime").textContent = "Current Time: " + currentDate.toLocaleTimeString();
+            document.getElementById("timeZone").textContent = "Timezone Offset: " + currentDate.getTimezoneOffset() + " minutes";
+            document.getElementById("dayOfWeek").textContent = "Day of Week: " + currentDate.toLocaleString('en-US', { weekday: 'long' });
+            document.getElementById("dayOfMonth").textContent = "Day of Month: " + currentDate.getDate();
+            document.getElementById("month").textContent = "Month: " + (currentDate.getMonth() + 1); // Months are 0-based
+            document.getElementById("year").textContent = "Year: " + currentDate.getFullYear();
+            document.getElementById("fullYear").textContent = "Full Year: " + currentDate.getUTCFullYear();
+            document.getElementById("hours").textContent = "Hours: " + currentDate.getHours();
+            document.getElementById("minutes").textContent = "Minutes: " + currentDate.getMinutes();
+            document.getElementById("seconds").textContent = "Seconds: " + currentDate.getSeconds();
+            document.getElementById("milliseconds").textContent = "Milliseconds: " + currentDate.getMilliseconds();
+        }
+    </script>
+</body>
+</html>
